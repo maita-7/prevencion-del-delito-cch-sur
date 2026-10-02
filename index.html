@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Prevención del Delito - CCH Sur</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/night.min.css" id="theme">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+        
+        * { box-sizing: border-box; }
+
+        .reveal { font-family: 'Montserrat', sans-serif; }
+        
+        /* Reducción estricta de márgenes y tamaños para encajar siempre en pantalla */
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+            margin-bottom: 10px;
+        }
+        
+        .reveal h1 { font-size: 2.2em; line-height: 1.1; margin-bottom: 10px; }
+        .reveal h2 { font-size: 1.4em; color: #fff; margin-bottom: 10px;}
+        .reveal h3 { font-size: 1.1em; color: #f2a900; margin-bottom: 10px; }
+        .reveal p, .reveal li { font-size: 0.75em; line-height: 1.3; margin-bottom: 8px; }
+        
+        /* Colores Tácticos */
+        .text-gold { color: #f2a900; }
+        .text-blue { color: #002b5c; }
+        .text-neon { color: #00ffcc; text-shadow: 0 0 8px rgba(0, 255, 204, 0.4); }
+        .text-red { color: #ff4d4d; text-shadow: 0 0 8px rgba(255, 77, 77, 0.4); }
+        .text-purple { color: #bf00ff; text-shadow: 0 0 8px rgba(191, 0, 255, 0.4); }
+        .text-orange { color: #ff9900; text-shadow: 0 0 8px rgba(255, 153, 0, 0.4); }
+        
+        /* Cajas de Contenido - Compactas */
+        .box-dinamica {
+            background: rgba(255, 255, 255, 0.08);
+            border-left: 4px solid #00ffcc;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+        .box-dinamica h4 { margin: 0 0 8px 0; font-size: 0.95em; }
+        .box-dinamica p, .box-dinamica li { margin: 0; font-size: 0.75em; }
+        
+        /* Cajas para revelar respuestas tácticas */
+        .box-respuesta {
+            background: rgba(255, 77, 77, 0.15);
+            border: 2px solid #ff4d4d;
+            border-left: 6px solid #ff4d4d;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            margin-top: 15px;
+            text-align: left;
+        }
+        .box-respuesta h4 { font-size: 1em; margin-bottom: 8px; }
+        .box-respuesta p { font-size: 0.75em; margin-bottom: 5px; }
+
+        /* Animaciones CSS Constantes */
+        .icon-large { font-size: 1.8em; margin-bottom: 5px; display: inline-block; }
+        .pulse-icon { animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } 100% { transform: scale(1); opacity: 1; } }
+        .float-icon { animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0px); } }
+
+        /* Grids Responsivos Ajustados */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; width: 100%; margin-top: 10px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; margin-top: 10px; }
+        
+        ul { padding-left: 20px; }
+
+        /* Cartilla de Seguridad */
+        .cartilla-container {
+            background: linear-gradient(135deg, #f2a900, #ffcc00);
+            color: #002b5c;
+            border-radius: 8px;
+            padding: 15px 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            width: 85%;
+            margin: 10px auto 0;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #fff;
+        }
+        .cartilla-content h2 { color: #002b5c; text-shadow: none; border-bottom: 3px solid #002b5c; padding-bottom: 5px; font-size: 1.2em; margin-bottom: 10px;}
+        .cartilla-content li { margin-bottom: 8px; font-weight: bold; font-size: 0.75em; display: flex; align-items: center;}
+        .cartilla-content li i { color: #e60000; font-size: 1.1em; margin-right: 10px; width: 20px; text-align: center; }
+        .cartilla-footer { text-align: center; margin-top: 10px; font-size: 0.65em; font-weight: 900; background: #002b5c; color: #fff; padding: 6px; border-radius: 4px;}
+    </style>
+</head>
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <section data-background-gradient="radial-gradient(circle, #002b5c, #000000)">
+                <div class="float-icon">
+                    <i class="fa-solid fa-shield-halved icon-large text-neon"></i>
+                </div>
+                <h1>Prevención <br><span class="text-gold">del Delito</span></h1>
+                <h3>Inteligencia Táctica y Acción</h3>
+                <p style="font-size: 0.9em; color: #00ffcc;">Comunidad CCH Sur</p>
+                <div style="margin-top: 1rem;">
+                    <i class="fa-solid fa-chevron-down pulse-icon text-gold" style="font-size: 1.5em;"></i>
+                </div>
+            </section>
+
+            <section data-transition="fade" data-background-color="#111">
+                <h2>¿Qué implica <span class="text-neon">Prevenir</span>?</h2>
+                <div class="grid-2">
+                    <div class="fragment fade-right box-dinamica">
+                        <i class="fa-solid fa-magnifying-glass text-gold icon-large"></i>
+                        <h4 class="text-neon">1. Identificar (Mental)</h4>
+                        <p>Analizar el entorno constantemente. Detectar vehículos sospechosos, puntos ciegos o situaciones de riesgo <strong>antes</strong> de que estén frente a ti.</p>
+                    </div>
+                    <div class="fragment fade-left box-dinamica">
+                        <i class="fa-solid fa-bolt text-gold icon-large"></i>
+                        <h4 class="text-neon">2. Anticipar (Físico)</h4>
+                        <p>Tomar decisiones tácticas tempranas (cruzar la calle, entrar a un local, evadir) que eliminen tu vulnerabilidad en ese instante.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section data-background-color="#1a1a1a" data-transition="slide">
+                <i class="fa-solid fa-hand-paper icon-large text-red float-icon"></i>
+                <h2 class="text-gold">Autoevaluación de Riesgo</h2>
+                <h3 style="margin-bottom: 15px;">"Levante la mano sinceramente quién..."</h3>
+                
+                <div class="box-dinamica" style="border-left-color: #ff4d4d; text-align: left;">
+                    <ul style="font-size: 0.9em; line-height: 1.4;">
+                        <li class="fragment">...camina por las calles del Pedregal con audífonos puestos.</li>
+                        <li class="fragment">...va mandando audios o mensajes de texto mientras camina.</li>
+                        <li class="fragment">...saca su celular en el paradero o al abrirse las puertas del transporte.</li>
+                        <li class="fragment">...publica "Estoy comiendo aquí" en sus historias en tiempo real.</li>
+                    </ul>
+                </div>
+                <h3 class="fragment text-neon" style="margin-top: 15px; font-size: 0.9em;">Vamos a analizar por qué cada punto es un riesgo crítico...</h3>
+            </section>
+
+            <section data-background-color="#1a1a1a">
+                <h2 class="text-gold">Análisis de Riesgo (I)</h2>
+                <div class="box-dinamica" style="border-left-color: #fff;">
+                    <h4 style="margin:0;"><i class="fa-solid fa-headphones"></i> El combo letal: Audífonos + Mensajes en la calle.</h4>
+                </div>
+                
+                <div class="fragment box-respuesta">
+                    <h4 class="text-red"><i class="fa-solid fa-circle-exclamation"></i> Diagnóstico Táctico:</h4>
+                    <p><strong>Anulas tus dos sentidos de alerta temprana (vista y oído).</strong></p>
+                    <p>Tu visión periférica se reduce a la pantalla. No escuchas el motor de una moto subiendo a la banqueta por detrás de ti. Para un asaltante, eres un "blanco ciego". Saben que no los verás venir y que tienes tu celular expuesto, listo para ser arrebatado sin resistencia.</p>
+                </div>
+            </section>
+
+            <section data-background-color="#1a1a1a">
+                <h2 class="text-gold">Análisis de Riesgo (II)</h2>
+                <div class="box-dinamica" style="border-left-color: #fff;">
+                    <h4 style="margin:0;"><i class="fa-solid fa-bus"></i> Celular en mano junto a las puertas del transporte.</h4>
+                </div>
+                
+                <div class="fragment box-respuesta">
+                    <h4 class="text-red"><i class="fa-solid fa-person-running"></i> El "Arrebato de Puerta":</h4>
+                    <p>El delincuente no viaja contigo. Está parado en el andén o banqueta esperando que el camión haga parada. Al abrirse las puertas, observa quién está cerca con el teléfono, mete la mano, lo arranca y corre.</p>
+                    <p><strong>El problema:</strong> Las puertas se cierran de inmediato y el chofer arranca. Es imposible perseguirlo. Siempre guarda tu celular una parada antes de bajarte.</p>
+                </div>
+            </section>
+
+            <section data-background-color="#1a1a1a">
+                <h2 class="text-gold">Análisis de Riesgo (III)</h2>
+                <div class="box-dinamica" style="border-left-color: #fff;">
+                    <h4 style="margin:0;"><i class="fa-solid fa-location-dot"></i> Publicar tu ubicación en Tiempo Real.</h4>
+                </div>
+                
+                <div class="fragment box-respuesta">
+                    <h4 class="text-red"><i class="fa-solid fa-phone-volume"></i> Geofencing y Secuestro Virtual:</h4>
+                    <p>Le entregas a los ciberdelincuentes la certeza de que estás lejos de casa. Utilizan esto para llamar a tu familia, decir que te tienen vigilado en ese restaurante y exigir un depósito exprés (Secuestro Virtual) antes de que puedan contactarte.</p>
+                    <p><strong>La Regla:</strong> Sube tus fotos horas después, cuando ya estés en tu casa.</p>
+                </div>
+            </section>
+
+            <section data-background-color="#141414">
+                <i class="fa-solid fa-map-location-dot icon-large text-gold"></i>
+                <h2>Radiografía del <span class="text-red">Sur</span></h2>
+                <p>Datos reales de las fiscalías (Coyoacán/Tlalpan). Los delitos mutaron:</p>
+                <div class="grid-3">
+                    <div class="fragment box-dinamica" style="border-left-color: #ff4d4d;">
+                        <h4 class="text-red">#1 Robo Transeúnte</h4>
+                        <p>Ocurre en segundos. Arrebato de celulares y mochilas en avenidas largas con bardas altas (Pedregal) usando motos para huir.</p>
+                    </div>
+                    <div class="fragment box-dinamica" style="border-left-color: #ff9900;">
+                        <h4 class="text-orange">#2 Robo Transporte</h4>
+                        <p>Asaltos relámpago en rutas de microbuses que conectan Perisur, Periférico y Metro Universidad.</p>
+                    </div>
+                    <div class="fragment box-dinamica" style="border-left-color: #f2a900;">
+                        <h4 class="text-gold">#3 Extorsión</h4>
+                        <p>El delito que más crece. Llamadas falsas, robo de identidad y estafas. No usan armas, usan tu información pública.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section data-transition="zoom" data-background-color="#2c3e50">
+                <h2>La Psicología del <span class="text-red">Asaltante</span></h2>
+                <p>El delincuente es oportunista. Selecciona a su presa por su nivel de distracción.</p>
+                <div class="grid-2">
+                    <div class="fragment box-dinamica" style="border-left-color: #ff4d4d;">
+                        <h4 class="text-red"><i class="fa-solid fa-user-slash"></i> Blanco Blando</h4>
+                        <p>Joven distraído, mirando el piso, caminando pegado a la pared. <strong>Es la víctima ideal. Será interceptado fácilmente.</strong></p>
+                    </div>
+                    <div class="fragment box-dinamica" style="border-left-color: #00ffcc;">
+                        <h4 class="text-neon"><i class="fa-solid fa-user-shield"></i> Blanco Duro</h4>
+                        <p>Joven que camina rápido, hace contacto visual de reojo, manos libres. <strong>Representa un riesgo táctico; el asaltante buscará a alguien más.</strong></p>
+                    </div>
+                </div>
+            </section>
+
+            <section data-background-gradient="linear-gradient(to bottom, #001a33, #000)">
+                <h2><span class="text-gold">Código de Cooper</span> (Fase 1)</h2>
+                <div class="grid-2">
+                    <div class="fragment box-dinamica" style="border-left-color: #ffffff;">
+                        <h4 style="color: #ffffff;"><i class="fa-solid fa-cloud"></i> Estado BLANCO</h4>
+                        <p>Desconexión total del mundo. Pantalla encendida, música alta. <br><br><span style="color:#ff4d4d; font-weight:bold;">Si te interceptan aquí, no podrás reaccionar, entrarás en shock.</span></p>
+                    </div>
+                    <div class="fragment box-dinamica" style="border-left-color: #f2a900;">
+                        <h4 style="color: #f2a900;"><i class="fa-solid fa-eye"></i> Estado AMARILLO</h4>
+                        <p>Alerta Relajada. Escaneas tu entorno 360°. Sabes quién va caminando detrás de ti y qué ocurre enfrente.<br><br><span style="color:#00ffcc; font-weight:bold;">Estado obligatorio en la vía pública.</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section data-background-gradient="linear-gradient(to top, #001a33, #000)">
+                <h2><span class="text-gold">Código de Cooper</span> (Fase 2)</h2>
+                <div class="grid-2">
+                    <div class="fragment box-dinamica" style="border-left-color: #ff9900;">
+                        <h4 class="text-orange"><i class="fa-solid fa-triangle-exclamation"></i> Estado NARANJA</h4>
+                        <p>Alerta Específica. Detectaste una anomalía: alguien cruza para seguirte. <br><br><strong>Evalúas tus rutas de escape inmediatamente (cruzar, entrar a tienda).</strong></p>
+                    </div>
+                    <div class="fragment box-dinamica" style="border-left-color: #ff4d4d;">
+                        <h4 style="color: #ff4d4d;"><i class="fa-solid fa-person-running"></i> Estado ROJO</h4>
+                        <p>El asalto está ocurriendo. <br><br><strong>El único plan válido es SOBREVIVIR: no te resistes, entregas tus pertenencias y te alejas.</strong></p>
+                    </div>
+                </div>
+            </section>
+
+            <section data-transition="slide" data-background-color="#0a192f">
+                <i class="fa-solid fa-street-view icon-large text-neon float-icon"></i>
+                <h2>Vía Pública: <span class="text-gold">Tácticas (I)</span></h2>
+                <div class="grid-2">
+                    <div class="fragment box-dinamica">
+                        <h4 class="text-neon"><i class="fa-solid fa-eye"></i> Espejeo Táctico</h4>
+                        <p>Usa los reflejos de ventanas o autos estacionados para ver quién viene detrás de ti sin tener que voltear bruscamente la cabeza.</p>
+                    </div>
+                    <div class="fragment box-dinamica">
+                        <h4 class="text-neon"><i class="fa-solid fa-person-walking"></i> Cambio de Ritmo</h4>
+                        <p>Si sientes que te siguen, cambia tu velocidad. Si la persona acelera y frena contigo, es una amenaza. Cruza la calle de inmediato.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section data-transition="slide" data-background-color="#0a192f">
+                <h2>Vía Pública: <span class="text-gold">Tácticas (II)</span></h2>
+                <div class="grid-2">
+                    <div class="fragment box-dinamica">
+                        <h4 class="text-neon"><i class="fa-solid fa-car"></i> Evitar Puntos Ciegos</h4>
+                        <p>El Pedregal tiene muros enormes. No camines rozando las bardas ni pegado a camionetas; reducen tu visión y facilitan emboscadas.</p>
+                    </div>
+                    <div class="fragment box-dinamica">
+                        <h4 class="text-neon"><i class="fa-solid fa-motorcycle"></i> Línea de Arrebato</h4>
+                        <p>Camina siempre del lado de la banqueta más alejado del arroyo vehicular para evitar tirones de mochila desde motos en movimiento.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section data-transition="convex" data-background-color="#141414">
+                <i class="fa-solid fa-train-subway icon-large text-gold spin-icon"></i>
+                <h2>Seguridad en <span class="text-neon">Transporte</span></h2>
+                <div class="grid-2">
+                    <div class="fragment box-dinamica" style="border-left-color: #f2a900;">
+                        <h4 class="text-gold"><i class="fa-solid fa-wallet"></i> Cartera de Sacrificio</h4>
+                        <p>Lleva una cartera vieja con poco efectivo e identificaciones caducadas a la mano. En un asalto rápido, la entregas y proteges tu dinero real.</p>
+                    </div>
+                    <div class="fragment box-dinamica" style="border-left-color: #f2a900;">
+                        <h4 class="text-gold"><i class="fa-solid fa-shield-halved"></i> Anclaje Seguro</h4>
+                        <p>En camiones, tu mochila siempre va al frente, sobre el pecho. Evita pararte junto a la puerta si tienes el celular afuera.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section data-background-color="#2c3e50">
+                <i class="fa-solid fa-car-side icon-large text-gold"></i>
+                <h2>Dinámica: <span class="text-gold">Viaje Nocturno</span></h2>
+                <div class="box-dinamica" style="border-left-color: #fff; margin-top: 10px;">
+                    <p>Pides un taxi por la noche. Al subirte, notas un olor extraño. A los 5 minutos, el chofer se desvía hacia calles oscuras, pone los seguros y te ofrece agua diciendo "tómela, cortesía de la app".</p>
+                </div>
+                <h3 class="fragment text-neon" style="margin-top: 15px; font-size: 1em;">¿Qué medidas preventivas debiste tomar antes y qué haces AHORA?</h3>
+            </section>
+
+            <section data-background-color="#2c3e50">
+                <h2>Resolución <span class="text-gold">Táctica</span></h2>
+                <div class="box-dinamica" style="border-left-color: #00ffcc; margin-top: 10px;">
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li class="fragment"><strong class="text-red">ERROR:</strong> Reclamarle agresivamente o intentar saltar. Tomar el agua (riesgo de sumisión química).</li>
+                        <li class="fragment"><strong class="text-neon">PREVENCIÓN:</strong> Cruza las placas antes de subir. Siéntate detrás del copiloto (visión total). Al subir, <strong>baja tu ventana 5 cm</strong> (purga gases y evita vacíos).</li>
+                        <li class="fragment"><strong class="text-neon">ACCIÓN:</strong> No bebas nada. Activa el botón SOS de App CDMX. Haz llamada en altavoz: <em>"Papá, mi GPS marca desvío, te mandé mi ubicación en vivo."</em> El chofer sabrá que está vigilado.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-background-gradient="linear-gradient(to right, #4b0082, #000)">
+                <i class="fa-solid fa-champagne-glasses icon-large text-purple float-icon"></i>
+                <h2>Entorno Social y <span class="text-purple">Fiestas</span> (I)</h2>
+                <div class="grid-2">
+                    <div class="fragment box-dinamica" style="border-left-color: #bf00ff;">
+                        <h4 class="text-purple"><i class="fa-solid fa-skull-crossbones"></i> Red Banderas</h4>
+                        <p>Evita lugares sin salidas de emergencia o "afters" clandestinos. Carecen de seguridad y son puntos calientes para riñas y violencia extrema.</p>
+                    </div>
+                    <div class="fragment box-dinamica" style="border-left-color: #bf00ff;">
+                        <h4 class="text-purple"><i class="fa-solid fa-wine-glass-empty"></i> Sumisión Química</h4>
+                        <p>Drogas incoloras para incapacitar. <strong>Regla:</strong> Nunca aceptes tragos ya servidos. Si vas al baño y dejas tu vaso, dalo por perdido y pide otro.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section data-background-gradient="linear-gradient(to left, #4b0082, #000)">
+                <h2>Protocolo: <span class="text-purple">El Escuadrón</span></h2>
+                <div class="box-dinamica" style="border-left-color: #bf00ff; margin-top: 10px;">
+                    <h4 class="text-purple" style="text-align: center; margin-bottom: 10px;">"Llegamos juntos, nos vamos juntos"</h4>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li class="fragment"><strong>La presa solitaria:</strong> Nadie del grupo abandona la fiesta solo. Dividirse es el factor de riesgo número uno.</li>
+                        <li class="fragment"><strong>Vigilancia médica:</strong> Si un amigo pierde la motricidad de forma repentina tras beber poco, <strong>fue drogado.</strong> Extráiganlo de inmediato hacia un hospital. No lo dejen "dormir" ahí.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section data-background-color="#2c3e50">
+                <i class="fa-solid fa-mobile-retro icon-large text-gold"></i>
+                <h2>Dinámica: <span class="text-gold">El Favor Peligroso</span></h2>
+                <div class="box-dinamica" style="border-left-color: #fff; margin-top: 15px;">
+                    <p>Caminando, se te acerca una persona aparentemente angustiada: "Acaban de chocar mi auto y no tengo pila. Por favor, préstame tu celular 10 segundos, solo para mandar un audio a mi seguro."</p>
+                </div>
+                <h3 class="fragment text-neon" style="margin-top: 15px; font-size: 1em;">La empatía te dice que ayudes. ¿Qué dice tu inteligencia táctica?</h3>
+            </section>
+
+            <section data-background-color="#2c3e50">
+                <h2>Resolución <span class="text-gold">Táctica</span></h2>
+                <div class="box-dinamica" style="border-left-color: #ff4d4d; margin-top: 15px;">
+                    <h4 class="text-red"><i class="fa-solid fa-circle-xmark"></i> ERROR: Entregar el dispositivo</h4>
+                    <p>Es la técnica de robo sin violencia más exitosa. Al dárselo desbloqueado, correrá. Tendrá acceso a tus correos, fotos y vaciará tus apps bancarias.</p>
+                </div>
+                <div class="fragment box-respuesta" style="border-left-color: #00ffcc; border-color: #00ffcc; background: rgba(0, 255, 204, 0.1);">
+                    <h4 class="text-neon"><i class="fa-solid fa-check"></i> ACCIÓN CORRECTA: Evasión.</h4>
+                    <p>Sin detener tu paso, levanta las manos ligeramente y di firme: <strong>"Lo siento, no traigo batería"</strong>. Continúa caminando. Tu seguridad vale más que ayudar a un desconocido en la calle.</p>
+                </div>
+            </section>
+
+            <section data-background-gradient="linear-gradient(to right, #002244, #111)">
+                <i class="fa-solid fa-globe icon-large text-neon"></i>
+                <h2>Riesgos <span class="text-gold">Digitales</span> (I)</h2>
+                <div class="grid-2">
+                    <div class="fragment box-dinamica" style="border-left-color: #ff4d4d;">
+                        <h4 class="text-red"><i class="fa-solid fa-money-bill-wave"></i> "Montadeudas"</h4>
+                        <p>Bajas una app de préstamos. Al dar "Aceptar", roban tus contactos. Luego editan fotos tuyas acusándote de delitos falsos y amenazan a tu familia con difundirlas si no pagas miles de pesos.</p>
+                    </div>
+                    <div class="fragment box-dinamica" style="border-left-color: #ff4d4d;">
+                        <h4 class="text-red"><i class="fa-solid fa-address-card"></i> Ingeniería Social</h4>
+                        <p>Los extorsionadores extraen de tu Instagram a qué escuela vas y dónde estás. Usan esa info para llamar a tu familia diciendo que te tienen secuestrado en esa ubicación.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section data-background-gradient="linear-gradient(to left, #002244, #111)">
+                <h2>Riesgos <span class="text-gold">Digitales</span> (II)</h2>
+                <div class="grid-2">
+                    <div class="fragment box-dinamica" style="border-left-color: #ff4d4d;">
+                        <h4 class="text-red"><i class="fa-solid fa-camera-retro"></i> Sextorsión</h4>
+                        <p>Al enviar contenido íntimo, pierdes el control. Crean perfiles falsos para enamorarte, piden fotos y luego exigen dinero a cambio de no enviarlas a tus contactos y profesores.</p>
+                    </div>
+                    <div class="fragment box-dinamica" style="border-left-color: #ff4d4d;">
+                        <h4 class="text-red"><i class="fa-solid fa-envelope-open-text"></i> Phishing Dirigido</h4>
+                        <p>Mensajes: <em>"Aviso UNAM: Tu beca requiere actualización, entra aquí"</em>. Son enlaces falsos diseñados para robar tus contraseñas institucionales o bancarias.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section data-transition="zoom" data-background-color="#001a33">
+                <i class="fa-solid fa-satellite-dish icon-large text-gold pulse-icon"></i>
+                <h2>Tecnología de <span class="text-neon">Apoyo</span></h2>
+                <div class="grid-2">
+                    <div class="fragment box-dinamica">
+                        <h4 class="text-neon"><i class="fa-brands fa-android"></i> App CDMX (Módulo SOS)</h4>
+                        <p>El <strong>Botón de Auxilio</strong> detona la alerta en el C5 inmediatamente con tu geolocalización. Envía patrullas sin necesidad de que hagas una llamada.</p>
+                    </div>
+                    <div class="fragment box-dinamica">
+                        <h4 class="text-neon"><i class="fa-solid fa-laptop-code"></i> Policía Cibernética</h4>
+                        <p>Ante extorsión, sextorsión o suplantación en redes, no borres nada (toma capturas) y llama al <strong>55 5242 5100 ext. 5086</strong>. Bajan los sitios web fraudulentos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section data-background-color="#111">
+                <i class="fa-solid fa-clipboard-question icon-large text-gold spin-icon"></i>
+                <h2>Mito o <span class="text-neon">Realidad</span></h2>
+                <div class="box-dinamica" style="border-left-color: #fff; margin-top: 15px;">
+                    <h4 style="margin:0;">"Enfrentarme al asaltante porque 'somos más', o intentar usar gas pimienta, nos mantendrá a salvo."</h4>
+                </div>
+                <div class="fragment box-respuesta">
+                    <h4 class="text-red"><i class="fa-solid fa-xmark"></i> REALIDAD: Falso / Riesgo Mortal</h4>
+                    <p>Intentar usar armas improvisadas o fuerza bruta te convierte en una amenaza directa para el asaltante, quien, lleno de adrenalina, no dudará en usar un arma letal contra ti para no perder el control.</p>
+                    <p><strong>Tu objetivo absoluto es sobrevivir, no ganar un combate callejero.</strong></p>
+                </div>
+            </section>
+
+            <section data-background-gradient="linear-gradient(to top, #660000, #000000)">
+                <i class="fa-solid fa-triangle-exclamation icon-large text-gold pulse-icon"></i>
+                <h2>Protocolo <span class="text-red">Asalto</span> (I)</h2>
+                <div class="grid-2">
+                    <div class="fragment box-dinamica" style="border-left-color: #ff4d4d;">
+                        <h4 class="text-neon">1. Adrenalina Cero</h4>
+                        <p>El delincuente está asustado y alterado. Si gritas "¡Tranquilo!", lo alterarás el doble. Guarda silencio, respira y obedece instrucciones rápidas.</p>
+                    </div>
+                    <div class="fragment box-dinamica" style="border-left-color: #ff4d4d;">
+                        <h4 class="text-neon">2. Manos de Rendición</h4>
+                        <p>Mantén las manos abiertas y a la altura del pecho. Muéstrale físicamente que no lo vas a atacar ni intentarás desarmarlo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section data-background-gradient="linear-gradient(to top, #660000, #000000)">
+                <h2>Protocolo <span class="text-red">Asalto</span> (II)</h2>
+                <div class="grid-2">
+                    <div class="fragment box-dinamica" style="border-left-color: #ff4d4d;">
+                        <h4 class="text-neon">3. Avisa tus movimientos</h4>
+                        <p>Comunícate: <em>"Voy a meter la mano a mi mochila por el celular"</em>. Un movimiento brusco hará que piense que sacarás un arma de defensa y disparará.</p>
+                    </div>
+                    <div class="fragment box-dinamica" style="border-left-color: #ff4d4d;">
+                        <h4 class="text-neon">4. Cero Reto Visual</h4>
+                        <p>Nunca lo mires fijamente a los ojos. Mírale el estómago o el calzado. Memoriza marcas de ropa o tatuajes para tu denuncia oficial.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section data-background-gradient="linear-gradient(to top, #660000, #000000)">
+                <h2>Protocolo <span class="text-red">Asalto</span> (III)</h2>
+                <div class="box-dinamica" style="border-left-color: #ff4d4d; margin-top: 15px;">
+                    <h4 class="text-neon" style="text-align: center; margin-bottom: 10px;"><i class="fa-solid fa-heart-pulse"></i> Tu vida es el objetivo principal</h4>
+                    <p style="text-align: center;">Bajo ninguna circunstancia te resistas a un asalto armado, ni persigas al delincuente cuando huya. Un celular se compra de nuevo; la vida no. <strong>Entrega todo, sobrevive, ponte a salvo y luego denuncia en la App CDMX. Sin denuncia, no hay patrullas.</strong></p>
+                </div>
+            </section>
+
+            <section data-transition="slide" data-background-color="#001122">
+                <h3 class="text-neon" style="margin-bottom: 5px;">¡Tomen una foto! <i class="fa-solid fa-camera"></i></h3>
+                <div class="cartilla-container">
+                    <div class="cartilla-content">
+                        <h2><i class="fa-solid fa-id-card-clip"></i> Reglas de Supervivencia</h2>
+                        <ul>
+                            <li><i class="fa-solid fa-mobile-screen-button"></i> 1. Cero distracciones en vía pública (No audífonos/celular).</li>
+                            <li><i class="fa-solid fa-car-side"></i> 2. Uber/Didi: Placas confirmadas, ventana abajo, ubicación compartida.</li>
+                            <li><i class="fa-solid fa-wine-glass-empty"></i> 3. Fiestas: Escuadrón unido. Nadie abandona a un amigo.</li>
+                            <li><i class="fa-solid fa-person-running"></i> 4. Asalto: Sobrevive. Entrega todo sin resistencia física.</li>
+                            <li><i class="fa-solid fa-bullhorn"></i> 5. Tecnología a tu favor: App CDMX y Denuncia siempre.</li>
+                        </ul>
+                        <div class="cartilla-footer">
+                            SEGURIDAD ESTUDIANTIL CCH SUR | PORTAR SIEMPRE EN MENTE
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-transition="zoom" data-background-gradient="radial-gradient(circle, #002b5c, #000000)">
+                <i class="fa-solid fa-shield-check icon-large text-neon float-icon" style="font-size: 4em;"></i>
+                <h1 style="font-size: 3.5em; margin-top: 15px;"><span class="text-neon">Gracias</span></h1>
+                <p class="text-gold" style="margin-top: 15px; font-weight: bold;">"La seguridad la construimos con inteligencia táctica"</p>
+                <div style="margin-top: 20px;">
+                    <h4 style="color: #fff; font-size: 1em;">Espacio de Preguntas y Respuestas</h4>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,        
+            progress: true,        
+            history: true,         
+            center: true,          
+            transition: 'slide',   
+            
+            // Lienzo Base (HD Compacto). Esto previene que se salga de pantalla.
+            width: 960,           
+            height: 700,           
+            margin: 0.1,          
+            minScale: 0.2,         
+            maxScale: 2.0,         
+            disableLayout: false,
+            
+            autoAnimateEasing: 'ease-out',
+            autoAnimateDuration: 0.8
+        });
+    </script>
+</body>
+</html>
